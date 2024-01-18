@@ -2,14 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('dark-mode-toggle');
   const body = document.body;
 
-  toggleButton.addEventListener('click', toggleDarkMode, { passive: true });
+  // Attach the click event listener to the toggle button
+  toggleButton.addEventListener('click', toggleDarkMode);
 
+  // Toggle dark mode and save the preference to a cookie
   function toggleDarkMode() {
       body.classList.toggle('dark-mode');
       const isDarkMode = body.classList.contains('dark-mode');
       setCookie('darkMode', isDarkMode);
   }
 
+  // Function to set a cookie with a specified name, value, and expiration time
   function setCookie(name, value, days = 365) {
       const date = new Date();
       date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return '';
   }
 
+  // Apply dark mode based on the stored cookie immediately on page load
   const storedPreference = getCookie('darkMode');
   if (storedPreference === 'true') {
       body.classList.add('dark-mode');
