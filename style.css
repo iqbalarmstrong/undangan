@@ -1,0 +1,110 @@
+body {
+  position: static;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.header {
+  position: fixed;
+  transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.page-one{
+  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  margin-top: 5px;
+  
+  
+}
+.page-one p{
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+}
+
+.page-two{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+
+}
+.page-two p{
+  font-family: "Salsa", cursive;
+  
+}
+.page-three{
+  margin: 40px 0;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-three p {
+  font-size: 50px;
+}
+
+.left{
+  font-size: 25px;
+
+}
+.right  img{
+  width: 500px;
+
+}
+#map{
+  height: 400px;
+}
+#demo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+@media only screen and (min-width: 425px) and (max-width: 1024px) {
+  body {
+    min-width: fit-content;
+  }
+  .page-one p{
+    font-size: 50px;
+  }
+  .page-two{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  
+  }
+  .left p {
+    font-size: 18px;
+  }
+  .right img{
+    width: 380px;
+  }
+  .page-three{
+    margin-left: 10px;
+  }
+  .page-three p{
+    font-size: 40px ;
+  }
+}
+
+
